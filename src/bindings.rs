@@ -20,8 +20,8 @@ pub type ZkStringEnumerator = ::std::option::Option<
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkGameVersion {
-    ZkGameVersion_GOTHIC1 = 0,
-    ZkGameVersion_GOTHIC2 = 1,
+    GOTHIC1 = 0,
+    GOTHIC2 = 1,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -572,24 +572,24 @@ pub type ZkFightAiInstance = ZkInternal_FightAiInstance;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkFightAiMove {
-    ZkFightAiMove_NOP = 0,
-    ZkFightAiMove_RUN = 1,
-    ZkFightAiMove_RUN_BACK = 2,
-    ZkFightAiMove_JUMP_BACK = 3,
-    ZkFightAiMove_TURN = 4,
-    ZkFightAiMove_STRAFE = 5,
-    ZkFightAiMove_ATTACK = 6,
-    ZkFightAiMove_ATTACK_SIDE = 7,
-    ZkFightAiMove_ATTACK_FRONT = 8,
-    ZkFightAiMove_ATTACK_TRIPLE = 9,
-    ZkFightAiMove_ATTACK_WHIRL = 10,
-    ZkFightAiMove_ATTACK_MASTER = 11,
-    ZkFightAiMove_TURN_TO_HIT = 15,
-    ZkFightAiMove_PARRY = 17,
-    ZkFightAiMove_STAND_UP = 18,
-    ZkFightAiMove_WAIT = 19,
-    ZkFightAiMove_WAIT_LONGER = 23,
-    ZkFightAiMove_WAIT_EXT = 24,
+    NOP = 0,
+    RUN = 1,
+    RUN_BACK = 2,
+    JUMP_BACK = 3,
+    TURN = 4,
+    STRAFE = 5,
+    ATTACK = 6,
+    ATTACK_SIDE = 7,
+    ATTACK_FRONT = 8,
+    ATTACK_TRIPLE = 9,
+    ATTACK_WHIRL = 10,
+    ATTACK_MASTER = 11,
+    TURN_TO_HIT = 15,
+    PARRY = 17,
+    STAND_UP = 18,
+    WAIT = 19,
+    WAIT_LONGER = 23,
+    WAIT_EXT = 24,
 }
 unsafe extern "C" {
     pub fn ZkFightAiInstance_getMove(slf: *const ZkFightAiInstance, i: ZkSize) -> ZkFightAiMove;
@@ -1173,102 +1173,102 @@ pub type ZkNpcInstance = ZkInternal_NpcInstance;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkDamageType {
-    ZkDamageType_BARRIER = 0,
-    ZkDamageType_BLUNT = 1,
-    ZkDamageType_EDGE = 2,
-    ZkDamageType_FIRE = 3,
-    ZkDamageType_FLY = 4,
-    ZkDamageType_MAGIC = 5,
-    ZkDamageType_POINT = 6,
-    ZkDamageType_FALL = 7,
+    BARRIER = 0,
+    BLUNT = 1,
+    EDGE = 2,
+    FIRE = 3,
+    FLY = 4,
+    MAGIC = 5,
+    POINT = 6,
+    FALL = 7,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkNpcInstanceAttribute {
-    ZkNpcAttribute_HITPOINTS = 0,
-    ZkNpcAttribute_HITPOINTS_MAX = 1,
-    ZkNpcAttribute_MANA = 2,
-    ZkNpcAttribute_MANA_MAX = 3,
-    ZkNpcAttribute_STRENGTH = 4,
-    ZkNpcAttribute_DEXTERITY = 5,
-    ZkNpcAttribute_REGENERATE_HP = 6,
-    ZkNpcAttribute_REGENERATE_MANA = 7,
+    HITPOINTS = 0,
+    HITPOINTS_MAX = 1,
+    MANA = 2,
+    MANA_MAX = 3,
+    STRENGTH = 4,
+    DEXTERITY = 5,
+    REGENERATE_HP = 6,
+    REGENERATE_MANA = 7,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkNpcInstanceTalent {
-    ZkNpcTalent_UNKNOWN = 0,
-    ZkNpcTalent_ONE_HANDED = 1,
-    ZkNpcTalent_TWO_HANDED = 2,
-    ZkNpcTalent_BOW = 3,
-    ZkNpcTalent_CROSSBOW = 4,
+    UNKNOWN = 0,
+    ONE_HANDED = 1,
+    TWO_HANDED = 2,
+    BOW = 3,
+    CROSSBOW = 4,
 }
 impl ZkNpcInstanceType {
-    pub const ZkNpcType_G2_AMBIENT: ZkNpcInstanceType = ZkNpcInstanceType::ZkNpcType_G1_AMBIENT;
+    pub const G2_AMBIENT: ZkNpcInstanceType = ZkNpcInstanceType::G1_AMBIENT;
 }
 impl ZkNpcInstanceType {
-    pub const ZkNpcType_G2_MAIN: ZkNpcInstanceType = ZkNpcInstanceType::ZkNpcType_G1_MAIN;
+    pub const G2_MAIN: ZkNpcInstanceType = ZkNpcInstanceType::G1_MAIN;
 }
 impl ZkNpcInstanceType {
-    pub const ZkNpcType_G2_FRIEND: ZkNpcInstanceType = ZkNpcInstanceType::ZkNpcType_G1_GUARD;
+    pub const G2_FRIEND: ZkNpcInstanceType = ZkNpcInstanceType::G1_GUARD;
 }
 impl ZkNpcInstanceType {
-    pub const ZkNpcType_G2_OC_AMBIENT: ZkNpcInstanceType = ZkNpcInstanceType::ZkNpcType_G1_FRIEND;
+    pub const G2_OC_AMBIENT: ZkNpcInstanceType = ZkNpcInstanceType::G1_FRIEND;
 }
 impl ZkNpcInstanceType {
-    pub const ZkNpcType_G2_OC_MAIN: ZkNpcInstanceType =
-        ZkNpcInstanceType::ZkNpcType_G1_MINE_AMBIENT;
+    pub const G2_OC_MAIN: ZkNpcInstanceType =
+        ZkNpcInstanceType::G1_MINE_AMBIENT;
 }
 impl ZkNpcInstanceType {
-    pub const ZkNpcType_G2_BL_AMBIENT: ZkNpcInstanceType =
-        ZkNpcInstanceType::ZkNpcType_G1_MINE_GUARD;
+    pub const G2_BL_AMBIENT: ZkNpcInstanceType =
+        ZkNpcInstanceType::G1_MINE_GUARD;
 }
 impl ZkNpcInstanceType {
-    pub const ZkNpcType_G2_TAL_AMBIENT: ZkNpcInstanceType =
-        ZkNpcInstanceType::ZkNpcType_G1_OW_AMBIENT;
+    pub const G2_TAL_AMBIENT: ZkNpcInstanceType =
+        ZkNpcInstanceType::G1_OW_AMBIENT;
 }
 impl ZkNpcInstanceType {
-    pub const ZkNpcType_G2_BL_MAIN: ZkNpcInstanceType = ZkNpcInstanceType::ZkNpcType_G1_OW_GUARD;
+    pub const G2_BL_MAIN: ZkNpcInstanceType = ZkNpcInstanceType::G1_OW_GUARD;
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkNpcInstanceType {
-    ZkNpcType_G1_AMBIENT = 0,
-    ZkNpcType_G1_MAIN = 1,
-    ZkNpcType_G1_GUARD = 2,
-    ZkNpcType_G1_FRIEND = 3,
-    ZkNpcType_G1_MINE_AMBIENT = 4,
-    ZkNpcType_G1_MINE_GUARD = 5,
-    ZkNpcType_G1_OW_AMBIENT = 6,
-    ZkNpcType_G1_OW_GUARD = 7,
-    ZkNpcType_G1_ROGUE = 8,
+    G1_AMBIENT = 0,
+    G1_MAIN = 1,
+    G1_GUARD = 2,
+    G1_FRIEND = 3,
+    G1_MINE_AMBIENT = 4,
+    G1_MINE_GUARD = 5,
+    G1_OW_AMBIENT = 6,
+    G1_OW_GUARD = 7,
+    G1_ROGUE = 8,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkNpcInstanceFlag {
-    ZkNpcFlag_NONE = 0,
-    ZkNpcFlag_FRIENDS = 1,
-    ZkNpcFlag_IMMORTAL = 2,
-    ZkNpcFlag_GHOST = 4,
-    ZkNpcFlag_PROTECTED = 8,
+    NONE = 0,
+    FRIENDS = 1,
+    IMMORTAL = 2,
+    GHOST = 4,
+    PROTECTED = 8,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkNpcInstanceNameSlot {
-    ZkNpcNameSlot_0 = 0,
-    ZkNpcNameSlot_1 = 1,
-    ZkNpcNameSlot_2 = 2,
-    ZkNpcNameSlot_3 = 3,
-    ZkNpcNameSlot_4 = 4,
+    Slot_0 = 0,
+    Slot_1 = 1,
+    Slot_2 = 2,
+    Slot_3 = 3,
+    Slot_4 = 4,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkNpcInstanceMissionSlot {
-    ZkNpcMissionSlot_0 = 0,
-    ZkNpcMissionSlot_1 = 1,
-    ZkNpcMissionSlot_2 = 2,
-    ZkNpcMissionSlot_3 = 3,
-    ZkNpcMissionSlot_4 = 4,
+    Slot_0 = 0,
+    Slot_1 = 1,
+    Slot_2 = 2,
+    Slot_3 = 3,
+    Slot_4 = 4,
 }
 unsafe extern "C" {
     pub fn ZkNpcInstance_getId(slf: *const ZkNpcInstance) -> i32;
@@ -1506,42 +1506,42 @@ pub type ZkItemInstance = ZkInternal_ItemInstance;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkItemInstanceFlag {
-    ZkItemInstanceFlag_DAGGER = 8192,
-    ZkItemInstanceFlag_SWORD = 16384,
-    ZkItemInstanceFlag_AXE = 32768,
-    ZkItemInstanceFlag_TWO_HANDED_SWORD = 65536,
-    ZkItemInstanceFlag_TWO_HANDED_AXE = 131072,
-    ZkItemInstanceFlag_BOW = 524288,
-    ZkItemInstanceFlag_CROSSBOW = 1048576,
-    ZkItemInstanceFlag_AMULET = 4194304,
-    ZkItemInstanceFlag_RING = 2048,
-    ZkItemInstanceFlag_BELT = 16777216,
-    ZkItemInstanceFlag_MISSION = 4096,
+    DAGGER = 8192,
+    SWORD = 16384,
+    AXE = 32768,
+    TWO_HANDED_SWORD = 65536,
+    TWO_HANDED_AXE = 131072,
+    BOW = 524288,
+    CROSSBOW = 1048576,
+    AMULET = 4194304,
+    RING = 2048,
+    BELT = 16777216,
+    MISSION = 4096,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkItemInstanceConditionSlot {
-    ZkItemInstanceConditionSlot_Slot0 = 0,
-    ZkItemInstanceConditionSlot_Slot1 = 1,
-    ZkItemInstanceConditionSlot_Slot2 = 2,
+    Slot0 = 0,
+    Slot1 = 1,
+    Slot2 = 2,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkItemInstanceStateSlot {
-    ZkItemInstanceState_Slot0 = 0,
-    ZkItemInstanceState_Slot1 = 1,
-    ZkItemInstanceState_Slot2 = 2,
-    ZkItemInstanceState_Slot3 = 3,
+    Slot0 = 0,
+    Slot1 = 1,
+    Slot2 = 2,
+    Slot3 = 3,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkItemInstanceTextSlot {
-    ZkItemInstanceText_Slot0 = 0,
-    ZkItemInstanceText_Slot1 = 1,
-    ZkItemInstanceText_Slot2 = 2,
-    ZkItemInstanceText_Slot3 = 3,
-    ZkItemInstanceText_Slot4 = 4,
-    ZkItemInstanceText_Slot5 = 5,
+    Slot0 = 0,
+    Slot1 = 1,
+    Slot2 = 2,
+    Slot3 = 3,
+    Slot4 = 4,
+    Slot5 = 5,
 }
 unsafe extern "C" {
     pub fn ZkItemInstance_getId(slf: *const ZkItemInstance) -> i32;
@@ -1921,13 +1921,13 @@ pub type ZkMenuInstance = ZkInternal_MenuInstance;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkMenuFlag {
-    ZkMenuFlag_OVERTOP = 1,
-    ZkMenuFlag_EXCLUSIVE = 2,
-    ZkMenuFlag_NO_ANIMATION = 4,
-    ZkMenuFlag_DONT_SCALE_DIMENSION = 8,
-    ZkMenuFlag_DONT_SCALE_POSITION = 16,
-    ZkMenuFlag_ALIGN_CENTER = 32,
-    ZkMenuFlag_SHOW_INFO = 64,
+    OVERTOP = 1,
+    EXCLUSIVE = 2,
+    NO_ANIMATION = 4,
+    DONT_SCALE_DIMENSION = 8,
+    DONT_SCALE_POSITION = 16,
+    ALIGN_CENTER = 32,
+    SHOW_INFO = 64,
 }
 unsafe extern "C" {
     pub fn ZkMenuInstance_getBackPic(slf: *const ZkMenuInstance) -> ZkString;
@@ -2016,34 +2016,34 @@ pub type ZkMenuItemInstance = ZkInternal_MenuItemInstance;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkMenuItemType {
-    ZkMenuItemType_UNKNOWN = 0,
-    ZkMenuItemType_TEXT = 1,
-    ZkMenuItemType_SLIDER = 2,
-    ZkMenuItemType_INPUT = 3,
-    ZkMenuItemType_CURSOR = 4,
-    ZkMenuItemType_CHOICEBOX = 5,
-    ZkMenuItemType_BUTTON = 6,
-    ZkMenuItemType_LISTBOX = 7,
+    UNKNOWN = 0,
+    TEXT = 1,
+    SLIDER = 2,
+    INPUT = 3,
+    CURSOR = 4,
+    CHOICEBOX = 5,
+    BUTTON = 6,
+    LISTBOX = 7,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkMenuItemFlag {
-    ZkMenuItemFlag_CHROMAKEYED = 1,
-    ZkMenuItemFlag_TRANSPARENT = 2,
-    ZkMenuItemFlag_SELECTABLE = 4,
-    ZkMenuItemFlag_MOVABLE = 8,
-    ZkMenuItemFlag_CENTERED = 16,
-    ZkMenuItemFlag_DISABLED = 32,
-    ZkMenuItemFlag_FADE = 64,
-    ZkMenuItemFlag_EFFECTS = 128,
-    ZkMenuItemFlag_ONLY_OUTGAME = 256,
-    ZkMenuItemFlag_ONLY_INGAME = 512,
-    ZkMenuItemFlag_PERF_OPTION = 1024,
-    ZkMenuItemFlag_MULTILINE = 2048,
-    ZkMenuItemFlag_NEEDS_APPLY = 4096,
-    ZkMenuItemFlag_NEEDS_RESTART = 8192,
-    ZkMenuItemFlag_EXTENDED_MENU = 16384,
-    ZkMenuItemFlag_HOR_SELECTABLE = 32768,
+    CHROMAKEYED = 1,
+    TRANSPARENT = 2,
+    SELECTABLE = 4,
+    MOVABLE = 8,
+    CENTERED = 16,
+    DISABLED = 32,
+    FADE = 64,
+    EFFECTS = 128,
+    ONLY_OUTGAME = 256,
+    ONLY_INGAME = 512,
+    PERF_OPTION = 1024,
+    MULTILINE = 2048,
+    NEEDS_APPLY = 4096,
+    NEEDS_RESTART = 8192,
+    EXTENDED_MENU = 16384,
+    HOR_SELECTABLE = 32768,
 }
 unsafe extern "C" {
     pub fn ZkMenuItemInstance_getFontName(slf: *const ZkMenuItemInstance) -> ZkString;
@@ -2431,22 +2431,22 @@ pub type ZkMusicThemeInstance = ZkInternal_MusicThemeInstance;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkMusicTransitionEffect {
-    ZkMusicTransitionEffect_UNKNOWN = 0,
-    ZkMusicTransitionEffect_NONE = 1,
-    ZkMusicTransitionEffect_GROOVE = 2,
-    ZkMusicTransitionEffect_FILL = 3,
-    ZkMusicTransitionEffect_BREAK = 4,
-    ZkMusicTransitionEffect_INTRO = 5,
-    ZkMusicTransitionEffect_END = 6,
-    ZkMusicTransitionEffect_END_AND_INTO = 7,
+    UNKNOWN = 0,
+    NONE = 1,
+    GROOVE = 2,
+    FILL = 3,
+    BREAK = 4,
+    INTRO = 5,
+    END = 6,
+    END_AND_INTO = 7,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkMusicTransitionType {
-    ZkMusicTransitionType_UNKNOWN = 0,
-    ZkMusicTransitionType_IMMEDIATE = 1,
-    ZkMusicTransitionType_BEAT = 2,
-    ZkMusicTransitionType_MEASURE = 3,
+    UNKNOWN = 0,
+    IMMEDIATE = 1,
+    BEAT = 2,
+    MEASURE = 3,
 }
 unsafe extern "C" {
     pub fn ZkMusicThemeInstance_getFile(slf: *const ZkMusicThemeInstance) -> ZkString;
@@ -4844,50 +4844,50 @@ pub type ZkMaterial = ZkInternal_Material;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkMaterialGroup {
-    ZkMaterialGroup_UNDEFINED = 0,
-    ZkMaterialGroup_METAL = 1,
-    ZkMaterialGroup_STONE = 2,
-    ZkMaterialGroup_WOOD = 3,
-    ZkMaterialGroup_EARTH = 4,
-    ZkMaterialGroup_WATER = 5,
-    ZkMaterialGroup_SNOW = 6,
+    UNDEFINED = 0,
+    METAL = 1,
+    STONE = 2,
+    WOOD = 3,
+    EARTH = 4,
+    WATER = 5,
+    SNOW = 6,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkAnimationMapping {
-    ZkAnimationMapping_NONE = 0,
-    ZkAnimationMapping_LINEAR = 1,
+    NONE = 0,
+    LINEAR = 1,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkWaveMode {
-    ZkWaveMode_NONE = 0,
-    ZkWaveMode_GROUND_AMBIENT = 1,
-    ZkWaveMode_GROUND = 2,
-    ZkWaveMode_WALL_AMBIENT = 3,
-    ZkWaveMode_WALL = 4,
-    ZkWaveMode_ENVIRONMENT = 5,
-    ZkWaveMode_WIND_AMBIENT = 6,
-    ZkWaveMode_WIND = 7,
+    NONE = 0,
+    GROUND_AMBIENT = 1,
+    GROUND = 2,
+    WALL_AMBIENT = 3,
+    WALL = 4,
+    ENVIRONMENT = 5,
+    WIND_AMBIENT = 6,
+    WIND = 7,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkWaveSpeed {
-    ZkWaveSpeed_NONE = 0,
-    ZkWaveSpeed_SLOW = 1,
-    ZkWaveSpeed_NORMAL = 2,
-    ZkWaveSpeed_FAST = 3,
+    NONE = 0,
+    SLOW = 1,
+    NORMAL = 2,
+    FAST = 3,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkAlphaFunction {
-    ZkAlphaFunction_DEFAULT = 0,
-    ZkAlphaFunction_NONE = 1,
-    ZkAlphaFunction_BLEND = 2,
-    ZkAlphaFunction_ADD = 3,
-    ZkAlphaFunction_SUBTRACT = 4,
-    ZkAlphaFunction_MULTIPLY = 5,
-    ZkAlphaFunction_MULTIPLY_ALT = 6,
+    DEFAULT = 0,
+    NONE = 1,
+    BLEND = 2,
+    ADD = 3,
+    SUBTRACT = 4,
+    MULTIPLY = 5,
+    MULTIPLY_ALT = 6,
 }
 pub type ZkMaterialEnumerator = ::std::option::Option<
     unsafe extern "C" fn(ctx: *mut ::std::os::raw::c_void, material: *const ZkMaterial) -> ZkBool,
@@ -5029,34 +5029,34 @@ pub type ZkCameraTrajectoryFrame = ZkInternal_CameraTrajectoryFrame;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkCameraMotion {
-    ZkCameraMotion_UNDEFINED = 0,
-    ZkCameraMotion_SMOOTH = 1,
-    ZkCameraMotion_LINEAR = 2,
-    ZkCameraMotion_STEP = 3,
-    ZkCameraMotion_SLOW = 4,
-    ZkCameraMotion_FAST = 5,
-    ZkCameraMotion_CUSTOM = 6,
+    UNDEFINED = 0,
+    SMOOTH = 1,
+    LINEAR = 2,
+    STEP = 3,
+    SLOW = 4,
+    FAST = 5,
+    CUSTOM = 6,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkCameraTrajectory {
-    ZkCameraTrajectory_WORLD = 0,
-    ZkCameraTrajectory_OBJECT = 1,
+    WORLD = 0,
+    OBJECT = 1,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkCameraLerpType {
-    ZkCameraLerpType_UNDEFINED = 0,
-    ZkCameraLerpType_PATH = 1,
-    ZkCameraLerpType_PATH_IGNORE_ROLL = 2,
-    ZkCameraLerpType_PATH_ROTATION_SAMPLES = 3,
+    UNDEFINED = 0,
+    PATH = 1,
+    PATH_IGNORE_ROLL = 2,
+    PATH_ROTATION_SAMPLES = 3,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkCameraLoopType {
-    ZkCameraLoop_NONE = 0,
-    ZkCameraLoop_RESTART = 1,
-    ZkCameraLoop_PINGPONG = 2,
+    NONE = 0,
+    RESTART = 1,
+    PINGPONG = 2,
 }
 pub type ZkCameraTrajectoryFrameEnumerator = ::std::option::Option<
     unsafe extern "C" fn(
@@ -5356,17 +5356,17 @@ pub type ZkLightPreset = ZkInternal_LightPreset;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkLightType {
-    ZkLightType_POINT = 0,
-    ZkLightType_SPOT = 1,
-    ZkLightType_RESERVED0 = 2,
-    ZkLightType_RESERVED1 = 3,
+    POINT = 0,
+    SPOT = 1,
+    RESERVED0 = 2,
+    RESERVED1 = 3,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkLightQuality {
-    ZkLightQuality_HIGH = 0,
-    ZkLightQuality_MEDIUM = 1,
-    ZkLightQuality_LOW = 2,
+    HIGH = 0,
+    MEDIUM = 1,
+    LOW = 2,
 }
 unsafe extern "C" {
     pub fn ZkLightPreset_load(buf: *mut ZkRead, version: ZkGameVersion) -> *mut ZkLightPreset;
@@ -5675,90 +5675,90 @@ pub type ZkVirtualObjectEnumerator = ::std::option::Option<
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkVobType {
-    ZkVobType_zCVob = 0,
-    ZkVobType_zCVobLevelCompo = 1,
-    ZkVobType_oCItem = 2,
-    ZkVobType_oCNpc = 3,
-    ZkVobType_zCMoverController = 4,
-    ZkVobType_zCVobScreenFX = 5,
-    ZkVobType_zCVobStair = 6,
-    ZkVobType_zCPFXController = 7,
-    ZkVobType_zCVobAnimate = 8,
-    ZkVobType_zCVobLensFlare = 9,
-    ZkVobType_zCVobLight = 10,
-    ZkVobType_zCVobSpot = 11,
-    ZkVobType_zCVobStartpoint = 12,
-    ZkVobType_zCMessageFilter = 13,
-    ZkVobType_zCCodeMaster = 14,
-    ZkVobType_zCTriggerWorldStart = 15,
-    ZkVobType_zCCSCamera = 16,
-    ZkVobType_zCCamTrj_KeyFrame = 17,
-    ZkVobType_oCTouchDamage = 18,
-    ZkVobType_zCTriggerUntouch = 19,
-    ZkVobType_zCEarthquake = 20,
-    ZkVobType_oCMOB = 21,
-    ZkVobType_oCMobInter = 22,
-    ZkVobType_oCMobBed = 23,
-    ZkVobType_oCMobFire = 24,
-    ZkVobType_oCMobLadder = 25,
-    ZkVobType_oCMobSwitch = 26,
-    ZkVobType_oCMobWheel = 27,
-    ZkVobType_oCMobContainer = 28,
-    ZkVobType_oCMobDoor = 29,
-    ZkVobType_zCTrigger = 30,
-    ZkVobType_zCTriggerList = 31,
-    ZkVobType_oCTriggerScript = 32,
-    ZkVobType_oCTriggerChangeLevel = 33,
-    ZkVobType_oCCSTrigger = 34,
-    ZkVobType_zCMover = 35,
-    ZkVobType_zCVobSound = 36,
-    ZkVobType_zCVobSoundDaytime = 37,
-    ZkVobType_oCZoneMusic = 38,
-    ZkVobType_oCZoneMusicDefault = 39,
-    ZkVobType_zCZoneZFog = 40,
-    ZkVobType_zCZoneZFogDefault = 41,
-    ZkVobType_zCZoneVobFarPlane = 42,
-    ZkVobType_zCZoneVobFarPlaneDefault = 43,
-    ZkVobType_ignored = 44,
-    ZkVobType_unknown = 45,
+    zCVob = 0,
+    zCVobLevelCompo = 1,
+    oCItem = 2,
+    oCNpc = 3,
+    zCMoverController = 4,
+    zCVobScreenFX = 5,
+    zCVobStair = 6,
+    zCPFXController = 7,
+    zCVobAnimate = 8,
+    zCVobLensFlare = 9,
+    zCVobLight = 10,
+    zCVobSpot = 11,
+    zCVobStartpoint = 12,
+    zCMessageFilter = 13,
+    zCCodeMaster = 14,
+    zCTriggerWorldStart = 15,
+    zCCSCamera = 16,
+    zCCamTrj_KeyFrame = 17,
+    oCTouchDamage = 18,
+    zCTriggerUntouch = 19,
+    zCEarthquake = 20,
+    oCMOB = 21,
+    oCMobInter = 22,
+    oCMobBed = 23,
+    oCMobFire = 24,
+    oCMobLadder = 25,
+    oCMobSwitch = 26,
+    oCMobWheel = 27,
+    oCMobContainer = 28,
+    oCMobDoor = 29,
+    zCTrigger = 30,
+    zCTriggerList = 31,
+    oCTriggerScript = 32,
+    oCTriggerChangeLevel = 33,
+    oCCSTrigger = 34,
+    zCMover = 35,
+    zCVobSound = 36,
+    zCVobSoundDaytime = 37,
+    oCZoneMusic = 38,
+    oCZoneMusicDefault = 39,
+    zCZoneZFog = 40,
+    zCZoneZFogDefault = 41,
+    zCZoneVobFarPlane = 42,
+    zCZoneVobFarPlaneDefault = 43,
+    ignored = 44,
+    unknown = 45,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkSpriteAlignment {
-    ZkSpriteAlignment_NONE = 0,
-    ZkSpriteAlignment_YAW = 1,
-    ZkSpriteAlignment_FULL = 2,
+    NONE = 0,
+    YAW = 1,
+    FULL = 2,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkShadowType {
-    ZkShadowType_NONE = 0,
-    ZkShadowType_BLOB = 1,
+    NONE = 0,
+    BLOB = 1,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkAnimationType {
-    ZkAnimationType_NONE = 0,
-    ZkAnimationType_WIND = 1,
-    ZkAnimationType_WIND_ALT = 2,
+    NONE = 0,
+    WIND = 1,
+    WIND_ALT = 2,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkVisualType {
-    ZkVisualType_DECAL = 0,
-    ZkVisualType_MESH = 1,
-    ZkVisualType_MULTI_RESOLUTION_MESH = 2,
-    ZkVisualType_PARTICLE_EFFECT = 3,
-    ZkVisualType_CAMERA = 4,
-    ZkVisualType_MODEL = 5,
-    ZkVisualType_MORPH_MESH = 6,
-    ZkVisualType_UNKNOWN = 7,
+    DECAL = 0,
+    MESH = 1,
+    MULTI_RESOLUTION_MESH = 2,
+    PARTICLE_EFFECT = 3,
+    CAMERA = 4,
+    MODEL = 5,
+    MORPH_MESH = 6,
+    UNKNOWN = 7,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkAiType {
-    ZkAiType_HUMAN = 0,
-    ZkAiType_MOVE = 1,
+    HUMAN = 0,
+    MOVE = 1,
 }
 unsafe extern "C" {
     pub fn ZkVirtualObject_new(type_: ZkVobType) -> *mut ZkVirtualObject;
@@ -6222,47 +6222,47 @@ pub type ZkNpcNews = ZkInternal_NpcNews;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkMessageFilterAction {
-    ZkMessageFilterAction_NONE = 0,
-    ZkMessageFilterAction_TRIGGER = 1,
-    ZkMessageFilterAction_UNTRIGGER = 2,
-    ZkMessageFilterAction_ENABLE = 3,
-    ZkMessageFilterAction_DISABLE = 4,
-    ZkMessageFilterAction_TOGGLE = 5,
+    NONE = 0,
+    TRIGGER = 1,
+    UNTRIGGER = 2,
+    ENABLE = 3,
+    DISABLE = 4,
+    TOGGLE = 5,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkMoverMessageType {
-    ZkMoverMessageType_FIXED_DIRECT = 0,
-    ZkMoverMessageType_FIXED_ORDER = 1,
-    ZkMoverMessageType_NEXT = 2,
-    ZkMoverMessageType_PREVIOUS = 3,
+    FIXED_DIRECT = 0,
+    FIXED_ORDER = 1,
+    NEXT = 2,
+    PREVIOUS = 3,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkTouchCollisionType {
-    ZkTouchCollisionType_NONE = 0,
-    ZkTouchCollisionType_BOX = 1,
-    ZkTouchCollisionType_POINT = 2,
+    NONE = 0,
+    BOX = 1,
+    POINT = 2,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkNpcNewsId {
-    ZkNpcNewsId_MURDER = 200,
-    ZkNpcNewsId_ATTACK = 195,
-    ZkNpcNewsId_THEFT = 190,
-    ZkNpcNewsId_DEFEAT = 185,
-    ZkNpcNewsId_NERVE = 180,
-    ZkNpcNewsId_INTERFERE = 175,
-    ZkNpcNewsId_HAS_DEFEATED = 170,
+    MURDER = 200,
+    ATTACK = 195,
+    THEFT = 190,
+    DEFEAT = 185,
+    NERVE = 180,
+    INTERFERE = 175,
+    HAS_DEFEATED = 170,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkNpcNewsSpread {
-    ZkNpcNewsSpread_DONT_SPREAD = 0,
-    ZkNpcNewsSpread_FRIENDLY_TOWARDS_VICTIM = 1,
-    ZkNpcNewsSpread_FRIENDLY_TOWARDS_WITNESS = 2,
-    ZkNpcNewsSpread_FRIENDLY_TOWARDS_OFFENDER = 3,
-    ZkNpcNewsSpread_SAME_GUILD_VICTIM = 4,
+    DONT_SPREAD = 0,
+    FRIENDLY_TOWARDS_VICTIM = 1,
+    FRIENDLY_TOWARDS_WITNESS = 2,
+    FRIENDLY_TOWARDS_OFFENDER = 3,
+    SAME_GUILD_VICTIM = 4,
 }
 unsafe extern "C" {
     pub fn ZkAnimate_load(buf: *mut ZkRead, version: ZkGameVersion) -> *mut ZkAnimate;
@@ -7033,28 +7033,28 @@ unsafe extern "C" {
     pub fn ZkNpc_setPacked(slf: *const ZkNpc, i: ZkSize, v: ZkString);
 }
 unsafe extern "C" {
-    pub fn ZkNpcTalent_new() -> *mut ZkNpcTalent;
+    pub fn new() -> *mut ZkNpcTalent;
 }
 unsafe extern "C" {
-    pub fn ZkNpcTalent_del(slf: *mut ZkNpcTalent);
+    pub fn del(slf: *mut ZkNpcTalent);
 }
 unsafe extern "C" {
-    pub fn ZkNpcTalent_getTalent(slf: *const ZkNpcTalent) -> ::std::os::raw::c_int;
+    pub fn getTalent(slf: *const ZkNpcTalent) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn ZkNpcTalent_getValue(slf: *const ZkNpcTalent) -> ::std::os::raw::c_int;
+    pub fn getValue(slf: *const ZkNpcTalent) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn ZkNpcTalent_getSkill(slf: *const ZkNpcTalent) -> ::std::os::raw::c_int;
+    pub fn getSkill(slf: *const ZkNpcTalent) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn ZkNpcTalent_setTalent(slf: *mut ZkNpcTalent, v: ::std::os::raw::c_int);
+    pub fn setTalent(slf: *mut ZkNpcTalent, v: ::std::os::raw::c_int);
 }
 unsafe extern "C" {
-    pub fn ZkNpcTalent_setValue(slf: *mut ZkNpcTalent, v: ::std::os::raw::c_int);
+    pub fn setValue(slf: *mut ZkNpcTalent, v: ::std::os::raw::c_int);
 }
 unsafe extern "C" {
-    pub fn ZkNpcTalent_setSkill(slf: *mut ZkNpcTalent, v: ::std::os::raw::c_int);
+    pub fn setSkill(slf: *mut ZkNpcTalent, v: ::std::os::raw::c_int);
 }
 unsafe extern "C" {
     pub fn ZkNpcSlot_getUsed(slf: *const ZkNpcSlot) -> ZkBool;
@@ -7167,12 +7167,12 @@ pub type ZkDoor = ZkInternal_Door;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkSoundMaterialType {
-    ZkSoundMaterialType_WOOD = 0,
-    ZkSoundMaterialType_STONE = 1,
-    ZkSoundMaterialType_METAL = 2,
-    ZkSoundMaterialType_LEATHER = 3,
-    ZkSoundMaterialType_CLAY = 4,
-    ZkSoundMaterialType_GLASS = 5,
+    WOOD = 0,
+    STONE = 1,
+    METAL = 2,
+    LEATHER = 3,
+    CLAY = 4,
+    GLASS = 5,
 }
 unsafe extern "C" {
     pub fn ZkMovableObject_load(buf: *mut ZkRead, version: ZkGameVersion) -> *mut ZkMovableObject;
@@ -7417,15 +7417,15 @@ pub type ZkSoundDaytime = ZkInternal_SoundDaytime;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkSoundMode {
-    ZkSoundMode_LOOP = 0,
-    ZkSoundMode_ONCE = 1,
-    ZkSoundMode_RANDOM = 2,
+    LOOP = 0,
+    ONCE = 1,
+    RANDOM = 2,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkSoundTriggerVolumeType {
-    SoundTriggerVolumeType_SPHERICAL = 0,
-    SoundTriggerVolumeType_ELLIPSOIDAL = 1,
+    SPHERICAL = 0,
+    ELLIPSOIDAL = 1,
 }
 unsafe extern "C" {
     pub fn ZkSound_load(buf: *mut ZkRead, version: ZkGameVersion) -> *mut ZkSound;
@@ -7597,10 +7597,10 @@ pub type ZkVfsNode = ZkInternal_VfsNode;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkVfsOverwriteBehavior {
-    ZkVfsOverwriteBehavior_NONE = 0,
-    ZkVfsOverwriteBehavior_ALL = 1,
-    ZkVfsOverwriteBehavior_NEWER = 2,
-    ZkVfsOverwriteBehavior_OLDER = 3,
+    NONE = 0,
+    ALL = 1,
+    NEWER = 2,
+    OLDER = 3,
 }
 pub type ZkVfsNodeEnumerator = ::std::option::Option<
     unsafe extern "C" fn(ctx: *mut ::std::os::raw::c_void, node: *const ZkVfsNode) -> ZkBool,
@@ -7824,35 +7824,35 @@ pub type ZkTriggerListTargetEnumerator = ::std::option::Option<
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkMoverBehavior {
-    ZkMoverBehavior_TOGGLE = 0,
-    ZkMoverBehavior_TRIGGER_CONTROL = 1,
-    ZkMoverBehavior_OPEN_TIME = 2,
-    ZkMoverBehavior_LOOP = 3,
-    ZkMoverBehavior_SINGLE_KEYS = 4,
+    TOGGLE = 0,
+    TRIGGER_CONTROL = 1,
+    OPEN_TIME = 2,
+    LOOP = 3,
+    SINGLE_KEYS = 4,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkMoverLerpType {
-    ZkMoverLerpType_CURVE = 0,
-    ZkMoverLerpType_LINEAR = 1,
+    CURVE = 0,
+    LINEAR = 1,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkMoverSpeedType {
-    ZkMoverSpeedType_CONSTANT = 0,
-    ZkMoverSpeedType_SLOW_START_END = 1,
-    ZkMoverSpeedType_SLOW_START = 2,
-    ZkMoverSpeedType_SLOW_END = 3,
-    ZkMoverSpeedType_SEGMENT_SLOW_START_END = 4,
-    ZkMoverSpeedType_SEGMENT_SLOW_START = 5,
-    ZkMoverSpeedType_SEGMENT_SLOW_END = 6,
+    CONSTANT = 0,
+    SLOW_START_END = 1,
+    SLOW_START = 2,
+    SLOW_END = 3,
+    SEGMENT_SLOW_START_END = 4,
+    SEGMENT_SLOW_START = 5,
+    SEGMENT_SLOW_END = 6,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkTriggerBatchMode {
-    ZkTriggerBatchMode_ALL = 0,
-    ZkTriggerBatchMode_NEXT = 1,
-    ZkTriggerBatchMode_RANDOM = 2,
+    ALL = 0,
+    NEXT = 1,
+    RANDOM = 2,
 }
 unsafe extern "C" {
     pub fn ZkTrigger_load(buf: *mut ZkRead, version: ZkGameVersion) -> *mut ZkTrigger;
@@ -8505,8 +8505,8 @@ pub type ZkBspNode = ZkInternal_BspNode;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkBspTreeType {
-    ZkBspTreeType_INDOOR = 0,
-    ZkBspTreeType_OUTDOOR = 1,
+    INDOOR = 0,
+    OUTDOOR = 1,
 }
 pub type ZkBspSectorEnumerator = ::std::option::Option<
     unsafe extern "C" fn(ctx: *mut ::std::os::raw::c_void, sector: *const ZkBspSector) -> ZkBool,
@@ -8661,9 +8661,9 @@ unsafe extern "C" {
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkArchiveFormat {
-    ZkArchiveFormat_BINARY = 0,
-    ZkArchiveFormat_BINSAFE = 1,
-    ZkArchiveFormat_ASCII = 2,
+    BINARY = 0,
+    BINSAFE = 1,
+    ASCII = 2,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -8964,86 +8964,86 @@ pub type ZkDaedalusInstance = ZkInternal_DaedalusInstance;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkDaedalusOpcode {
-    ZkDaedalusOpcode_ADD = 0,
-    ZkDaedalusOpcode_SUB = 1,
-    ZkDaedalusOpcode_MUL = 2,
-    ZkDaedalusOpcode_DIV = 3,
-    ZkDaedalusOpcode_MOD = 4,
-    ZkDaedalusOpcode_OR = 5,
-    ZkDaedalusOpcode_ANDB = 6,
-    ZkDaedalusOpcode_LT = 7,
-    ZkDaedalusOpcode_GT = 8,
-    ZkDaedalusOpcode_MOVI = 9,
-    ZkDaedalusOpcode_ORR = 11,
-    ZkDaedalusOpcode_AND = 12,
-    ZkDaedalusOpcode_LSL = 13,
-    ZkDaedalusOpcode_LSR = 14,
-    ZkDaedalusOpcode_LTE = 15,
-    ZkDaedalusOpcode_EQ = 16,
-    ZkDaedalusOpcode_NEQ = 17,
-    ZkDaedalusOpcode_GTE = 18,
-    ZkDaedalusOpcode_ADDMOVI = 19,
-    ZkDaedalusOpcode_SUBMOVI = 20,
-    ZkDaedalusOpcode_MULMOVI = 21,
-    ZkDaedalusOpcode_DIVMOVI = 22,
-    ZkDaedalusOpcode_PLUS = 30,
-    ZkDaedalusOpcode_NEGATE = 31,
-    ZkDaedalusOpcode_NOT = 32,
-    ZkDaedalusOpcode_CMPL = 33,
-    ZkDaedalusOpcode_NOP = 45,
-    ZkDaedalusOpcode_RSR = 60,
-    ZkDaedalusOpcode_BL = 61,
-    ZkDaedalusOpcode_BE = 62,
-    ZkDaedalusOpcode_PUSHI = 64,
-    ZkDaedalusOpcode_PUSHV = 65,
-    ZkDaedalusOpcode_PUSHVI = 67,
-    ZkDaedalusOpcode_MOVS = 70,
-    ZkDaedalusOpcode_MOVSS = 71,
-    ZkDaedalusOpcode_MOVVF = 72,
-    ZkDaedalusOpcode_MOVF = 73,
-    ZkDaedalusOpcode_MOVVI = 74,
-    ZkDaedalusOpcode_B = 75,
-    ZkDaedalusOpcode_BZ = 76,
-    ZkDaedalusOpcode_GMOVI = 80,
-    ZkDaedalusOpcode_PUSHVV = 245,
+    ADD = 0,
+    SUB = 1,
+    MUL = 2,
+    DIV = 3,
+    MOD = 4,
+    OR = 5,
+    ANDB = 6,
+    LT = 7,
+    GT = 8,
+    MOVI = 9,
+    ORR = 11,
+    AND = 12,
+    LSL = 13,
+    LSR = 14,
+    LTE = 15,
+    EQ = 16,
+    NEQ = 17,
+    GTE = 18,
+    ADDMOVI = 19,
+    SUBMOVI = 20,
+    MULMOVI = 21,
+    DIVMOVI = 22,
+    PLUS = 30,
+    NEGATE = 31,
+    NOT = 32,
+    CMPL = 33,
+    NOP = 45,
+    RSR = 60,
+    BL = 61,
+    BE = 62,
+    PUSHI = 64,
+    PUSHV = 65,
+    PUSHVI = 67,
+    MOVS = 70,
+    MOVSS = 71,
+    MOVVF = 72,
+    MOVF = 73,
+    MOVVI = 74,
+    B = 75,
+    BZ = 76,
+    GMOVI = 80,
+    PUSHVV = 245,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkDaedalusDataType {
-    ZkDaedalusDataType_VOID = 0,
-    ZkDaedalusDataType_FLOAT = 1,
-    ZkDaedalusDataType_INT = 2,
-    ZkDaedalusDataType_STRING = 3,
-    ZkDaedalusDataType_CLASS = 4,
-    ZkDaedalusDataType_FUNCTION = 5,
-    ZkDaedalusDataType_PROTOTYPE = 6,
-    ZkDaedalusDataType_INSTANCE = 7,
+    VOID = 0,
+    FLOAT = 1,
+    INT = 2,
+    STRING = 3,
+    CLASS = 4,
+    FUNCTION = 5,
+    PROTOTYPE = 6,
+    INSTANCE = 7,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkDaedalusInstanceType {
-    ZkDaedalusInstanceType_GuildValues = 0,
-    ZkDaedalusInstanceType_Npc = 1,
-    ZkDaedalusInstanceType_Mission = 2,
-    ZkDaedalusInstanceType_Item = 3,
-    ZkDaedalusInstanceType_Focus = 4,
-    ZkDaedalusInstanceType_Info = 5,
-    ZkDaedalusInstanceType_ItemReact = 6,
-    ZkDaedalusInstanceType_Spell = 7,
-    ZkDaedalusInstanceType_Svm = 8,
-    ZkDaedalusInstanceType_Menu = 9,
-    ZkDaedalusInstanceType_MenuItem = 10,
-    ZkDaedalusInstanceType_Camera = 11,
-    ZkDaedalusInstanceType_MusicSystem = 12,
-    ZkDaedalusInstanceType_MusicTheme = 13,
-    ZkDaedalusInstanceType_MusicJingle = 14,
-    ZkDaedalusInstanceType_ParticleEffect = 15,
-    ZkDaedalusInstanceType_EffectBase = 16,
-    ZkDaedalusInstanceType_ParticleEffectEmitKey = 17,
-    ZkDaedalusInstanceType_FightAi = 18,
-    ZkDaedalusInstanceType_SoundEffect = 19,
-    ZkDaedalusInstanceType_SoundSystem = 20,
-    ZkDaedalusInstanceType_Invalid = 21,
+    GuildValues = 0,
+    Npc = 1,
+    Mission = 2,
+    Item = 3,
+    Focus = 4,
+    Info = 5,
+    ItemReact = 6,
+    Spell = 7,
+    Svm = 8,
+    Menu = 9,
+    MenuItem = 10,
+    Camera = 11,
+    MusicSystem = 12,
+    MusicTheme = 13,
+    MusicJingle = 14,
+    ParticleEffect = 15,
+    EffectBase = 16,
+    ParticleEffectEmitKey = 17,
+    FightAi = 18,
+    SoundEffect = 19,
+    SoundSystem = 20,
+    Invalid = 21,
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -9552,21 +9552,21 @@ pub type ZkTextureBuilder = ZkInternal_TextureBuilder;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkTextureFormat {
-    ZkTextureFormat_B8G8R8A8 = 0,
-    ZkTextureFormat_R8G8B8A8 = 1,
-    ZkTextureFormat_A8B8G8R8 = 2,
-    ZkTextureFormat_A8R8G8B8 = 3,
-    ZkTextureFormat_B8G8R8 = 4,
-    ZkTextureFormat_R8G8B8 = 5,
-    ZkTextureFormat_A4R4G4B4 = 6,
-    ZkTextureFormat_A1R5G5B5 = 7,
-    ZkTextureFormat_R5G6B5 = 8,
-    ZkTextureFormat_P8 = 9,
-    ZkTextureFormat_DXT1 = 10,
-    ZkTextureFormat_DXT2 = 11,
-    ZkTextureFormat_DXT3 = 12,
-    ZkTextureFormat_DXT4 = 13,
-    ZkTextureFormat_DXT5 = 14,
+    B8G8R8A8 = 0,
+    R8G8B8A8 = 1,
+    A8B8G8R8 = 2,
+    A8R8G8B8 = 3,
+    B8G8R8 = 4,
+    R8G8B8 = 5,
+    A4R4G4B4 = 6,
+    A1R5G5B5 = 7,
+    R5G6B5 = 8,
+    P8 = 9,
+    DXT1 = 10,
+    DXT2 = 11,
+    DXT3 = 12,
+    DXT4 = 13,
+    DXT5 = 14,
 }
 pub type ZkTextureMipmapEnumerator = ::std::option::Option<
     unsafe extern "C" fn(
@@ -10464,58 +10464,58 @@ pub type ZkEventCameraTremor = ZkInternal_EventCameraTremor;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkAnimationFlag {
-    ZkAnimationFlag_NONE = 0,
-    ZkAnimationFlag_MOVE = 1,
-    ZkAnimationFlag_ROTATE = 2,
-    ZkAnimationFlag_QUEUE = 4,
-    ZkAnimationFlag_FLY = 8,
-    ZkAnimationFlag_IDLE = 16,
-    ZkAnimationFlag_INPLACE = 32,
+    NONE = 0,
+    MOVE = 1,
+    ROTATE = 2,
+    QUEUE = 4,
+    FLY = 8,
+    IDLE = 16,
+    INPLACE = 32,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkAnimationDirection {
-    ZkAnimationDirection_FORWARD = 0,
-    ZkAnimationDirection_BACKWARD = 1,
+    FORWARD = 0,
+    BACKWARD = 1,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkEventType {
-    ZkEventType_UNKNOWN = 0,
-    ZkEventType_ITEM_CREATE = 1,
-    ZkEventType_ITEM_INSERT = 2,
-    ZkEventType_ITEM_REMOVE = 3,
-    ZkEventType_ITEM_DESTROY = 4,
-    ZkEventType_ITEM_PLACE = 5,
-    ZkEventType_ITEM_EXCHANGE = 6,
-    ZkEventType_SET_FIGHT_MODE = 7,
-    ZkEventType_MUNITION_PLACE = 8,
-    ZkEventType_MUNITION_REMOVE = 9,
-    ZkEventType_SOUND_DRAW = 10,
-    ZkEventType_SOUND_UNDRAW = 11,
-    ZkEventType_MESH_SWAP = 12,
-    ZkEventType_TORCH_DRAW = 13,
-    ZkEventType_TORCH_INVENTORY = 14,
-    ZkEventType_TORCH_DROP = 15,
-    ZkEventType_HIT_LIMB = 16,
-    ZkEventType_HIT_DIRECTION = 17,
-    ZkEventType_DAMAGE_MULTIPLIER = 18,
-    ZkEventType_PARRY_FRAME = 19,
-    ZkEventType_OPTIMAL_FRAME = 20,
-    ZkEventType_HIT_END = 21,
-    ZkEventType_COMBO_WINDOW = 22,
+    UNKNOWN = 0,
+    ITEM_CREATE = 1,
+    ITEM_INSERT = 2,
+    ITEM_REMOVE = 3,
+    ITEM_DESTROY = 4,
+    ITEM_PLACE = 5,
+    ITEM_EXCHANGE = 6,
+    SET_FIGHT_MODE = 7,
+    MUNITION_PLACE = 8,
+    MUNITION_REMOVE = 9,
+    SOUND_DRAW = 10,
+    SOUND_UNDRAW = 11,
+    MESH_SWAP = 12,
+    TORCH_DRAW = 13,
+    TORCH_INVENTORY = 14,
+    TORCH_DROP = 15,
+    HIT_LIMB = 16,
+    HIT_DIRECTION = 17,
+    DAMAGE_MULTIPLIER = 18,
+    PARRY_FRAME = 19,
+    OPTIMAL_FRAME = 20,
+    HIT_END = 21,
+    COMBO_WINDOW = 22,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkFightMode {
-    ZkFightMode_FIST = 0,
-    ZkFightMode_SINGLE_HANDED = 1,
-    ZkFightMode_DUAL_HANDED = 2,
-    ZkFightMode_BOW = 3,
-    ZkFightMode_CROSSBOW = 4,
-    ZkFightMode_MAGIC = 5,
-    ZkFightMode_NONE = 6,
-    ZkFightMode_INVALID = 255,
+    FIST = 0,
+    SINGLE_HANDED = 1,
+    DUAL_HANDED = 2,
+    BOW = 3,
+    CROSSBOW = 4,
+    MAGIC = 5,
+    NONE = 6,
+    INVALID = 255,
 }
 pub type ZkAnimationCombineEnumerator = ::std::option::Option<
     unsafe extern "C" fn(
@@ -11383,17 +11383,17 @@ pub type ZkSaveState = ZkInternal_SaveState;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkSaveTopicSection {
-    ZkSaveTopicSection_MISSIONS = 0,
-    ZkSaveTopicSection_NOTES = 1,
+    MISSIONS = 0,
+    NOTES = 1,
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
 pub enum ZkSaveTopicStatus {
-    ZkSaveTopicStatus_FREE = 0,
-    ZkSaveTopicStatus_RUNNING = 1,
-    ZkSaveTopicStatus_SUCCESS = 2,
-    ZkSaveTopicStatus_FAILURE = 3,
-    ZkSaveTopicStatus_OBSOLETE = 4,
+    FREE = 0,
+    RUNNING = 1,
+    SUCCESS = 2,
+    FAILURE = 3,
+    OBSOLETE = 4,
 }
 unsafe extern "C" {
     pub fn ZkSaveGame_new(version: ZkGameVersion) -> *mut ZkSaveGame;
