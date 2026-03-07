@@ -5,6 +5,11 @@ fn main() {
     // and dependant project might not link in debug build
     cfg.define("CMAKE_DEBUG_POSTFIX", "");
 
+    // Needed otherwise there is an error:
+    // file INSTALL cannot find
+    // "... ZenKit-sys/vendor/ZenKitCAPI/vendor/ZenKit/include/phoenix"
+    cfg.define("ZK_ENABLE_INSTALL", "NO");
+
     if std::env::var("CARGO_FEATURE_STATIC").is_ok() {
         cfg.define("BUILD_SHARED_LIBS", "OFF");
     }
