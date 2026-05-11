@@ -1,3 +1,4 @@
 [submodule "vendor/ZenKitCAPI"]
 	path = vendor/ZenKitCAPI
-	url = https://github.com/mmcomando/ZenKitCAPI.git
+	url = https://github.com/GothicKit/ZenKitCAPI.git
+	branch = main

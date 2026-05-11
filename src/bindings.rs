@@ -9236,6 +9236,9 @@ unsafe extern "C" {
     );
 }
 unsafe extern "C" {
+    pub fn ZkDaedalusSymbol_setInstance(slf: *mut ZkDaedalusSymbol, value: *mut ZkDaedalusInstance);
+}
+unsafe extern "C" {
     pub fn ZkDaedalusSymbol_getIsConst(slf: *const ZkDaedalusSymbol) -> ZkBool;
 }
 unsafe extern "C" {
@@ -9252,6 +9255,18 @@ unsafe extern "C" {
 }
 unsafe extern "C" {
     pub fn ZkDaedalusSymbol_getHasReturn(slf: *const ZkDaedalusSymbol) -> ZkBool;
+}
+unsafe extern "C" {
+    pub fn ZkDaedalusSymbol_setAccessTrapEnabled(slf: *mut ZkDaedalusSymbol, trap: ZkBool);
+}
+unsafe extern "C" {
+    pub fn ZkDaedalusSymbol_getAccessTrapEnabled(slf: *const ZkDaedalusSymbol) -> ZkBool;
+}
+unsafe extern "C" {
+    pub fn ZkDaedalusSymbol_setLocalVariablesEnabled(slf: *mut ZkDaedalusSymbol, enable: ZkBool);
+}
+unsafe extern "C" {
+    pub fn ZkDaedalusSymbol_getLocalVariablesEnabled(slf: *const ZkDaedalusSymbol) -> ZkBool;
 }
 unsafe extern "C" {
     pub fn ZkDaedalusSymbol_getName(slf: *const ZkDaedalusSymbol) -> ZkString;
@@ -9342,14 +9357,17 @@ pub type ZkDaedalusVmExternalDefaultCallback = ::std::option::Option<
         sym: *mut ZkDaedalusSymbol,
     ),
 >;
+pub type ZkDaedalusVmTrapCallback = ::std::option::Option<
+    unsafe extern "C" fn(ctx: *mut ::std::os::raw::c_void, sym: *const ZkDaedalusSymbol),
+>;
 unsafe extern "C" {
-    pub fn ZkDaedalusVm_load(buf: *mut ZkRead) -> *mut ZkDaedalusVm;
+    pub fn ZkDaedalusVm_load(buf: *mut ZkRead, flags: u8) -> *mut ZkDaedalusVm;
 }
 unsafe extern "C" {
-    pub fn ZkDaedalusVm_loadPath(path: ZkString) -> *mut ZkDaedalusVm;
+    pub fn ZkDaedalusVm_loadPath(path: ZkString, flags: u8) -> *mut ZkDaedalusVm;
 }
 unsafe extern "C" {
-    pub fn ZkDaedalusVm_loadVfs(vfs: *mut ZkVfs, name: ZkString) -> *mut ZkDaedalusVm;
+    pub fn ZkDaedalusVm_loadVfs(vfs: *mut ZkVfs, name: ZkString, flags: u8) -> *mut ZkDaedalusVm;
 }
 unsafe extern "C" {
     pub fn ZkDaedalusVm_del(slf: *mut ZkDaedalusVm);
@@ -9445,6 +9463,14 @@ unsafe extern "C" {
     );
 }
 unsafe extern "C" {
+    pub fn ZkDaedalusVm_overrideFunctionNaked(
+        slf: *mut ZkDaedalusVm,
+        name: *const ::std::os::raw::c_char,
+        cb: ZkDaedalusVmExternalCallback,
+        ctx: *mut ::std::os::raw::c_void,
+    );
+}
+unsafe extern "C" {
     pub fn ZkDaedalusVm_registerExternalDefault(
         slf: *mut ZkDaedalusVm,
         cb: ZkDaedalusVmExternalDefaultCallback,
@@ -9453,6 +9479,29 @@ unsafe extern "C" {
 }
 unsafe extern "C" {
     pub fn ZkDaedalusVm_printStackTrace(slf: *mut ZkDaedalusVm);
+}
+unsafe extern "C" {
+    pub fn ZkDaedalusVm_setAccessTrapCallback(
+        slf: *mut ZkDaedalusVm,
+        cb: ZkDaedalusVmTrapCallback,
+        ctx: *mut ::std::os::raw::c_void,
+    );
+}
+unsafe extern "C" {
+    pub fn ZkDaedalusVm_isTopOfStackReference(slf: *mut ZkDaedalusVm) -> ZkBool;
+}
+unsafe extern "C" {
+    pub fn ZkDaedalusVm_popReference(
+        slf: *mut ZkDaedalusVm,
+        idx: *mut u8,
+        context: *mut *mut ZkDaedalusInstance,
+    ) -> *mut ZkDaedalusSymbol;
+}
+unsafe extern "C" {
+    pub fn ZkDaedalusVm_getProgramCounter(slf: *mut ZkDaedalusVm) -> u32;
+}
+unsafe extern "C" {
+    pub fn ZkDaedalusVm_jumpUnsafe(slf: *mut ZkDaedalusVm, pc: u32);
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
